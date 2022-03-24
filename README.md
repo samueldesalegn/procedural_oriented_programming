@@ -1,5 +1,7 @@
 // procedural_oriented_programming
 /*  Chapter one
+=
+
 Introduction to Computers and Programming Languages
 Objectiver
 - State briefly a history of computers
@@ -17,7 +19,9 @@ d. Internet => The individual networks can be connected further to form intercon
 e. web browser => The hottest tool for viewing information on the internet
 
 
-2. Computer Architecture
+2 Computer Architecture
+= 
+
 A typical computer today has five basic components: RAM, CPU, I/O, storage devices, and communication devices. 
 
 Binary Numbers:
@@ -116,6 +120,65 @@ Application
 =
 => A ja55va application is a complete stand-alone program that does not require a web browser. 
 A Java application is analogous a program we write in other programming languages
+
+Java is an ideal vehicle for teaching the fundamentals of object-oriented programming. 
+
+Summary:
+=
+1. Charles Babbage invented the Difference Engine and Analytical Engine, precursors to the modern computer
+2. Ada Lovelace is considered the first computer programmer
+3. The first two modern computers were MARK I and  ENIAC I
+4. John von Neumann invented the stored-program approach of executing programs
+5. Computers are connected into a network. Interconnected networks are called internets
+6. Binary numbers are used in computers
+7. A typical computer consists of five components: RAM, CPU, I/O devices, Storage devices, and communication devices
+8. There are three levels of programming languages: machine, assembly, and high-level
+9. Java is one of the newest high-level programming languages in use today
+
+Exercise of the chapter 
+=
+conversion to decimal numbers
+
+1010 = 2*2*2 + 0 + 2 + 0 = 10
+110011 = 32 + 16 + 0 + 0 + 2 + 1 = 51
+110.01 = 4 + 2 + 0 + 1/4 = 6.25
+
+convert to binary
+
+35 
+35/2 = 17 + 1
+17/2 = 8 + 1
+8/2 = 4 + 0
+4/2 = 2 + 0
+2/2 = 1 + 0
+1/2 = 0 + 1
+100011 = 32 + 2 + 1 = 35
+
+
+567
+567/2 = 283 + 1
+283/2 = 141 + 1
+141/2 = 70 + 1
+70/2 = 35 + 0
+35/2 = 17 + 1
+17/2 = 8 + 1
+8/2 = 4 + 0
+4/2 = 2 + 0
+2/2 = 1 + 0
+1/2 = 0 + 1
+=> 1000110111 
+
+98 
+98/2 = 49 + 0
+49/2 = 24 + 1
+24/2 = 12 + 0
+12/2 = 6 + 0
+6/2 = 3 + 0
+3/2 = 1 + 1
+1/2 = 0 + 1
+=> 1100010
+
+
 
 
 
