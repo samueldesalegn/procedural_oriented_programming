@@ -1,0 +1,118 @@
+/* Objectives 
+
+- Name the basic components of oop
+- Differentiate classes and objects
+- Differentiate class and instance methods
+- Differentiate class and instance data values
+- Draw program diagrams using icons for classes, objects, and other components of OOP
+- Describe the significance of inheritance in OOP
+- Name and explain the stages of the software development life cycle.
+
+1.1 Classes and Objects
+The two most important concepts in OOP are the class and the object. 
+=> Object is a thing = both tangible or intangible. A program written in object-oriented style will consist of interacting objects. 
+=> An object is comprised of data and operations that manipulate these data. 
+=> Almost all nontrivial programs will have many objects of the same type
+
+=> We use a rectangle to represent an object and place the underlined name of the object inside the rectangle
+
+Inside a program we write instructions to create objects. For the computer to be able to create an object, we must provide a definition, called a class. 
+A class is a kind of mold or template that dictates what objects can and cannot do. An object is called an instance of a class. An object is an instance of exactly one class. 
+An instance of a class belongs to the class. Once a class is defined, we can create as many instances of the class as a program requires.
+
+A class must be defined before you can create an instance (object) of the class. 
+
+We use a rectangle to represent a class with its name appearing inside the rectangle. Notice the name of a class is not underlined while the name of an object is. 
+
+1.2 Messages and Methods
+To instruct a class or an object to perform a task, we send a message to it. For a class or an object to process the message, it must be programmed accordingly. 
+
+=> For a class or an object to process the message it receives, it must possess a matching method, 
+which is a sequence of instructions that a class or an object follows to perform a task.
+=> A method defined for a class is called a class method
+=> A method defined for an object is an instance method.
+=> A value we pass to an object is called an argument of a message. 
+=> Notice that the name of the message we send to an object or a class must be the same as the method's name.
+
+1.3 Class and Instance Data Values
+=> An object is comprised of data values and methods. Analogous to defining class and instance methods, we can define class and instance data values.
+For exmaple, we can define an instance data value current balance for Account objects to record the current balance.
+=> All instances of the same class will possess the same set of data values.
+
+A class data value is used to represent information shared by all instances or to represent collective information about the instances. 
+Notice the class data value is underlined to show the fact that this value is accessible to individual objects, which are underlined. 
+
+Data values are also called data members because they belong to a class or instance of the class.
+There are two types of data values: those that change over time and those that cannot. A data value that can change is called a variable, 
+and one that cannot change is a constant. Four kinds of data values:
+1. class variables 2. class constants 3. instance variables, and 4. instance constants 
+
+1.4 Inheritance
+In OOP, we use a mechanism called inheritance to design two or more entities that are different but share many common features. 
+First, we define a class that contains the common features of the entities.
+Then we define classes as an extension of the common class inheriting everything from the common class.
+We call the common class the superclass and all classes that inherit from it subclasses. Superclass = base class = ancestor, and subclass = derived class = descendant
+
+=> Inheritance is not limited to one level. A subclass can be a superclass of other classes, forming an inheritance hierarchy. 
+Inheritance is very powerful, and if it is used properly, we can develop complex programs very efficiently and elegantly. 
+=> The flip side of using a very powerful tool is that if we do not use it correctly, we could end up in a far worse situation than if we did not use it. 
+
+1.5 Software Engineering and Software Life Cycle 
+
+Knowing a programming language alone is not enough to become a proficient software developer. You must know how to design a program. 
+=> The sequence of stages from conception to operation of a program is called the software life cycle. 
+=> Software Engineering is the application of a systematic and disciplined approach to the development, testing and maintenance of a program. 
+
+There are five major phases in the software life cycle: Analysis, design, coding, testing, and operation.
+a. Analysis => feasibility study => We analyze the problem and determine whether a solution is possible. 
+=> If solution is possible => requirements specification. The features must be stated in a manner that is testable. 
+b. Design
+=> We turn a requirements specification into a detailed design of the program. 
+=> For an object-oriented design, the output from the design phase will be a set of classes that fulfill the requirements. 
+
+c. Coding
+=> We implement the design into an actual program, => a Java program. Once we have a well-constructed design, implementing it into
+an actual code is really not that difficult. 
+
+d. Testing
+=> When the implementation is completed, we move to the testing phase. 
+=> We run the program, using different sets of data to verify that the program runs according to the specification. Two types of testing:
+1. Unit testing => we test classes individually.
+2. Integration testing => we test that classes work together correctly.
+
+Debugging
+=> Activity to eliminate programming error. 
+
+e. Operation
+=> Finally, after testing is successfully concluded, we enter the operation phase, in which the program will be put into actual use. 
+=> The most important and time-consuming activity during the operation phase is software maintenance.
+Software maintenance means making changes to software.
+Well-designed and - constructed software is easy to maintain. 
+
+Summary:
+=> An object is an instance of a class. Many instances can be created from a single class
+=> There are class and instance methods. We can send messages to objects and classes if they possess matching methods
+=> There are class and instance data values. Data values are also called data members
+=> Inheritance is a powerful mechanism to model two or more entities that are different but share common features
+=> The sequence of software development stages from conception to operation is called the software life cycle.
+=> Five major phases => analysis, design, coding, testing, and operation
+=> Software engineering is the application of a systematic and disciplined approach to the development, testing, and maintenance of a program. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
+
+
+
