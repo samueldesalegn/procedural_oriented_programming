@@ -1,0 +1,126 @@
+/* Objectives:
+1. Identify the basic components of Java programs
+2. Write simple Java programs
+3. Describe the difference between object declaration and object creation
+4. Describe the process of creating and running Java programs
+5. Use the Date, SimpleDataFormat, String, and Scanner classes from the standard Java packages
+6. Develop Java programs, using the incremental development approach
+
+2.1 The First Java Program
+ Chapter 2 Sample program: Displaying a Window File: Ch2Sample1.Java
+*/
+package procedural_course;
+import javax.swing.*;
+class ch2Sample1 {
+	public static void main(String[] args) {
+		JFrame myWindow;
+		myWindow = new JFrame();
+		myWindow.setSize(300, 200);
+		myWindow.setTitle("My First Java Program");
+		myWindow.setVisible(true);
+
+	}	
+}
+/* 
+This program declares one class called Ch2Sample1, and the class includes one method called main. From this main method, the Ch2Sample1 class creates and uses
+a JFrame object named myWindow by sending the three messages setSize, setTitle, and setVisible to the object. 
+=> The JFrame class is one of many classes that come with the Java system. 
+=> An instance of this JFrame class is used to represent a single window on the computer screen. 
+
+Programmer/user-defined classes => classes programmers define
+Standard classes => predefined classes that come with Java system.
+
+program Diagram => expressing programs visually
+Dependency Relationship => drawing arrow to show relationship
+
+To use an object in a program, first we declare and create an object, and then we send messages to it.
+
+Object Declaration
+Every object we use in a program must be declared. An object declaration designates the name of an object and the class to which the object belongs. 
+Its syntax:
+<class name> <object name>
+The class must be defined beforehand.
+To declare an object as an instance of some class, the class must be defined already. 
+
+Identifier
+When we declare an object, we must give it a name. Any valid identifier that is not reserved for other uses can be used as an object name.
+A Java identifier is a sequence of letters, digits, underscores, and dollar signs with the firstone being a nondigit.
+We use an identifier to name a class, object, method, and others.
+
+
+Standard Naming convention
+
+We follow the Java standard naming convention of using an uppercase letter for the first letter of the class names and a lowercase letter for the first of the object names.
+It is important to follow the standard naming convention so others who read your program can easily distinguish the purposes of identifiers.
+Porgrams that follow the standard naming convention are easier to read than those that do not.
+And remember that software maintenance is easier with easy-to-understand programs.
+
+=> Follow the standard naming convention in writing your Java programs to make them easier to read.
+
+Object Creation
+No object is actually created by the declaration. An object declaration simply declares the name (identifier) that we use to refer to an object.
+
+We create an object by invoking the new operator. (constructor)?
+
+Instead of writing statements for object declaration and creation separately, we can combine them into one statement.
+
+Student John = new Student();
+
+Remember that when an object is created, a certain amount of memory space is allocated for storing this object. 
+If this allocated but unused space is not returned to the system for other uses, the space gets wasted. 
+This returning of space to the system is called deallocation, and the mechanism to deallocate unused space is called garbage collection.
+
+Message Sending
+
+After the object is created, we can start sending messages to it. The syntax:
+<object name>.<method name>(<arguments>);
+
+Object Name
+Name of the object to which we are sending a message
+
+Method Name
+The name of the message we are sending 
+
+Argument
+The argument we are passing with the message
+
+The expression calling object O's method M is synonymous with sending message M to object O. 
+
+2.2 Program Components
+A Java program is composed of comments, import statements, and class declarations. 
+
+Comments
+=> In addition to the instructions for computers to follow, programs contain comments in which we state the purpose of the program, 
+explain the meaning of code, and provide any other descriptions to help programmers understand the program. 
+
+Although not required to run the program, comments are indispensable in writing easy-to-understand code.
+
+
+
+//single line comment
+
+/*
+multiple
+lines 
+comment
+*/
+
+javadoc comment
+
+=> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
