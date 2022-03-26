@@ -1,0 +1,162 @@
+/*
+
+Chapter Objectives:
+1. Select proper types of numerical data
+2. Write arithmetic expressions in Java
+3. Evaluate arithmetic expressions, following the precendence rules
+4. Describe how the memory allocation works for objects and primitive data values
+5. Write mathematical expressions, using methods in the Math class
+6. Use the GregorianCalendar class in manipulating date information such as year, month and day
+7. Use the DecimalFormat class to format numerical data
+8. Convert input string values to numerical data
+9. Input numerical data by using System.in and output numerical data by using System.out
+10. Apply the incremental development technique in writing programs
+11. (optional) Describe how the integers and real numbers are represented in memory
+
+3.1 Variables
+
+Suppose we want to compute the sum and difference of two numbers. To compute the sum and difference of x and y in a Java program, we must first declare
+what kind of data will be assigned to them. After we assign values to them, we can compute their sum and difference.
+For example, we can declare like:
+
+int x, y;
+
+=> When this declaration is made, memory locations to store data values for x and y are allocated. 
+These memory locations are called variables, and x and y are the names we associate with the memory locations.
+Any valid identifier can be used as a variable name. After the declaration is made, we can assign only integers to x and y.
+
+=> A variable has three properties: a memory location to store the value, the type of data stored in the memory location, and the name used to refer to the memory location.
+
+six numerical data types
+=> byte, short, int, long, float, and double
+(byte, short, int, long) => integers
+(float, and double) => real numbers
+
+Higher precision
+
+=> A data type with a larger range of values is said to have a higher precision. 
+=> The storage difference becomes significant only when your program uses thousands of integers. 
+=> Therefore, we will almost always use the data type int for integers. 
+We use long when we need to process very large integers that are outside the range of values int can represent. For real numbers,
+it is more common to use double.
+=> Although it requires more memory space than float, we prefer double because of its higher precision in representing real numbers. 
+
+Assignment statement
+
+=> We assign a value to a variable by using an assignment assignment statement. 
+=> Be careful not to confuse mathematical equality and assignment
+=> <variable> = <expression>;
+
+=> Before using a variable, we must first declare and assign a value to it.
+
+=> Object names are synonymous with variables whose contents are references to objects. (i.e., memory addresses)
+
+3.2 Arithmetic Expressions
+
+An arithmetic operator designates numerical computation. 
+
+Integer Division
+When both numbers are integers, the result is an integer quotient. That is, any fractional part is truncated. 
+Division between two integers is called integer division. When either or both numbers are float or double, the result is a real number.
+
+The modulo operator returns the remainder of a division. Although real numbers can be used with the modulo operator, 
+the most common use of the modulo operator involves only integers.
+
+Operand
+An operand in arithmetic expressions can be a constant, a variable, a method call, or another arithmetic expression, possibly surrounded by parentheses. 
+
+Binary operator
+The addition operator is called a binary operator because it operates on two operands. 
+All other arithmetic operators except the minus are also binary. The minus and plus operators can be both binary and unary. 
+=> A unary operator operates on one operand as in 
+-x
+
+
+subexpression
+eg. 
+x + 3*y
+Often a nested expression is called a subexpression. The subexpression 3*y has operands 3 and y. 
+
+Precedence rules
+=> When two or more operators are present in an expression, we determine the order of evaluation by following the precedence rules.
+
+Higher to lower precedence
+subexpression => unary operator => Multiplicative operator => Additive operator
+
+()    =>        -,+      =>     *, /, %    =>    +, -
+
+=> When an arithmetic expression consists of variables and constants of the same data type, then the result of the expression will be that data type also. 
+
+implicit and explicit typecasting
+
+when the data types of variables and constants in an arithmetic expression are different data types, then a casting conversion will take place.
+A casting conversion, or typecasting, is a process that converts a value of one data type to other data type.
+
+
+Numeric promotion
+
+=> An implicit conversion called numeric promotion is applied to the operands of an arithmetic operator. The promotion is based on the rules.
+
+The conversion is called promotion because the operand is converted from a lower to a higher precision.
+
+typecast operator
+Explicit conversion is applied to an operand by using a typecast operator. 
+eg.
+(float) x/3;
+
+assignment conversion
+
+An assignment conversion is another implicit conversion that occurs when the variable and the value of an expression in an assignment are not of the same data type.
+=> An assignment conversion occurs only if the data type of the variable has a higher precision than the data type of the expression's value.
+
+int number = 23.6 => invalid
+
+Shorthand assignment operator
+
+We can rewrite this statement without repeating the same variable on the left and right-hand sides of the assignment symbol by using the shorthand assignment operator:
+
+sum += 5;
+
+Assignment operator's precedence order is lower than any other operator. Assignment operators are evaluated right to left. 
+
+
+3.3 Constants
+
+While a program is running, different values may be assigned to a variable at different times, but in some cases we do not want this to happen. 
+If we want a value to remain fixed, then we us a constant. A constant is declared in a manner similar to a variable but with additional reserved word final.
+
+We follow the standard Java convention to name a constant, using only capital letters and underscores. 
+
+eg.
+final double PI = 3.14159;
+
+Named constant
+
+=> The constant PI is called a named constant or symbolic constant. 
+
+Literal constant
+=> The second type of constant is called a literal constant, and we refer to it by using an actual value. 
+
+3.4 Displaying Numerical Values
+
+Operator overloading
+=> When a symbol is used to represent more than one operation, this is called operator overloading
++ => addition or concatenation 
+
+The plus symbol operator is evaluated from left to right. 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*/
