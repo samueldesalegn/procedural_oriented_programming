@@ -1,0 +1,153 @@
+/*
+
+Objectives:
+1. Define a class with multiple methods and data members
+2. Differentiate the local and instance variables
+3. Define and use value-returning methods
+4. Distinguish private and public methods
+5. Pass both primitive data and objects to a method
+
+
+4.1 Defining and Using a Class
+
+The most economical and effective means of on-campus transportation is without doubt a bicycle. 
+Suppose we want to develop a program that tracks the bicycles by assigning to them some form of identification number along with the relevant 
+information, such as the owner's name and phone number.
+
+To develop such a Java program, we need to design many different types of objects. 
+
+package procedural_course;
+
+public class Bicycle {
+	private String ownerName;
+	public Bicycle() {
+		ownerName = "unknown";
+
+	}
+	public String getOwnerName() {
+		return ownerName;
+	}
+	public void setOwnerName(String name) {
+		 ownerName = name;
+	}
+	
+	
+}
+
+package procedural_course;
+
+public class BicycleRegistration {
+	public static void main(String[] args) {
+		Bicycle bike1 = new Bicycle();
+		bike1.setOwnerName("Adam Smith");
+		Bicycle bike2 = new Bicycle();
+		bike2.setOwnerName("Ben Jones");
+
+		String owner1 = bike1.getOwnerName();
+		String owner2 = bike2.getOwnerName();
+
+		System.out.println(owner1 + " owns a bicycle");
+		System.out.println(owner2 + " also owns a bicycle");
+	}
+	
+}
+
+The dependency diagram between the two classes is as follows:
+
+BicycleRegistration -------> Bicycle
+
+Although it is not a requirement, we will save one class definition per file to keep things simple.
+=> Save one class definition per file. Use the name of the class followed by the suffix java as the file name.
+=> Follow this rule to avoid any unnecessary complications.
+
+The Bicycle class 
+The class declaration begins with the reserved word class followed by the name. 
+Any valid identifier that is not a reserved word can be used as the class name. 
+
+The ownerName data member is an instance variable.
+
+<modifier-list> <data type> <name>
+private String ownerName;
+
+Accessibility/visibility modifier
+(private)
+=> restricts who can have a direct access to the data member. 
+
+If the modifier is private, then only the methods defined in the class can access it directly.
+
+void method
+
+=> A method that does not return a value, such as this setOwnerName method, is declared as void.
+=> It is called a void method.
+=> The accessibility modifier for the setOwnerName method is declared as public.
+
+=> This means the program that uses the Bicycle class can access, or call, this method. 
+=> It is possible to declare a method as private. If a method is declared as private, 
+then it cannot be called from the program that uses the class. For now we will limit our discussion
+to public methods.
+
+value-returning method
+=> must include a return statement of the format.
+
+return <expression>;
+
+accessor
+=> A method that returns information about an object = accessor
+
+mutator
+=> The inverse of an accessor that sets a property of an object
+
+Accessors and mutators are commonly called are commonly called get and set methods, respectively. 
+
+Constructor 
+=> A constructor is special method that is executed when a new instance of the class is created, that is,
+when the new operator is called. 
+
+The purpose of the constructor is to initialize the data member to a value that reflects the 
+state to which the real name is not yet assigned. 
+
+Since a constructor is executed when a new instance is created, it is the most logical 
+place to initialize the data members and perform any other initialization tasks.
+
+4.3 Matching Arguments and Parameters
+
+Argument
+
+=>An argument is a value we pass to a method, and the value is assigned to the corresponding parameters.
+
+Parameter
+=> A parameter is a placeholder in the called method to hold the value of a passed argument. 
+
+The arguments and parameters are matched in the left-right order. 
+As long as the data type of an argument is assignment-compatible to the corresponding parameter, the call is valid.
+
+=> The identifier we use for an argument has no relation to the identifier used for the corresponding parameter.
+
+A parameter receives the value of a corresponding argument. Because a parameter is like a placeholder that will not
+hold a value until an argument is passed to it, a parameter is called a formal parameter and an argument an actual parameter.
+
+
+4.4 Passing Objects to a method
+When calling the methods of the Bicycle and Account classes, we passed a numberical value or a String. 
+
+First, we define the Student class. A student object has a name(String) and an email(String).
+
+class Student {
+//Data Members
+private String name;
+private String email;
+
+//constructor
+public 
+
+
+
+
+
+
+
+
+
+
+
+*/
