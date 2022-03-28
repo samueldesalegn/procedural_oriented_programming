@@ -132,13 +132,459 @@ When calling the methods of the Bicycle and Account classes, we passed a numberi
 
 First, we define the Student class. A student object has a name(String) and an email(String).
 
-class Student {
-//Data Members
-private String name;
-private String email;
+package procedural_course;
 
-//constructor
-public 
+public class LibraryCard {
+	// Data Members
+
+	// Student owner of this card
+	private Student owner;
+
+	//number of books borrowed
+	private int borrowCnt;
+
+	// Constructor
+	public LibraryCard() {
+		owner = null;
+		borrowCnt = 0;
+	}
+	// numOfBooks are checked out'
+	public void checkOut(int numOfBooks) {
+		borrowCnt += numOfBooks;
+	}
+	// Returns the number of books borrowed
+	public int getNumberOfBooks() {
+		return borrowCnt;
+	}
+	//Returns the name of the owner of this card
+	public String getOwnerName() {
+		return owner.getName();
+	}
+	//Sets owner of this card to student
+	public void setOwner(Student student) {
+		owner = student;
+	}
+	//Returns the string representation of this card
+	public String toString() {
+		return "Owner Name:  " + owner.getName() + "\n" +
+		        "  Email:  " + owner.getEmail() + "\n" +
+						"Books Borrowed: " + borrowCnt;
+	}
+	
+}
+
+package procedural_course;
+
+public class Student {
+	//Data Members
+	private String name;
+	private String email;
+
+	//Constructor
+	public Student() {
+		name = "Unassigned";
+		email = "Unassigned";
+	}
+	//Returns the email of this student
+	public String getEmail() {
+		return email;
+	}
+	//Returns the name of this student
+	public String getName() {
+		return name;
+	}
+	//Assigns the email of this student
+	public void setEmail(String address) {
+		email = address;
+
+	}
+	// Assigns the name of this student
+	public void setName(String studentName) {
+		name = studentName;
+	}
+	
+}
+
+Notice that we initialize the data member owner to null in the constructor. The value of null means that owner is pointing to no object.
+The setOwner method must be called to assign a Student object. The method accepts a Student object as its parameter and sets the data member owner to this
+Student object.
+
+The toString method is a method that returns a string representation of an object.
+
+=> Because an object can have a nested structure, it is convenient for those who use the class to have a quick way to get printable information of an instance.
+
+
+package procedural_course;
+
+public class Librarian {
+	public static void main(String[] args) {
+		Student student = new Student();
+		LibraryCard card1 = new LibraryCard();
+		LibraryCard card2 = new LibraryCard();
+
+		student.setName("Jon Java");
+		student.setEmail("jj@javauniv.edu");
+
+		card1.setOwner(student);
+		card1.checkOut(3);
+
+		card2.setOwner(student);
+		
+		System.out.println("Card1 Info:");
+		System.out.println(card1.toString() + "\n");
+
+		System.out.println("Card2 Info:");
+		System.out.println(card2.toString() + "\n");
+	}
+	
+}
+
+=> It is critical to realize that when we say pass an object to a method, we are not sending a copy of an object, but rather a reference to the object. 
+
+=> When pass an object to a method, we are actually passing the address, or reference of an object to the method. 
+
+It is possible to return the Student object itself by defining the following method:
+public Student getOwner() {
+return owner;
+}
+=> For an object, the content of a variable is an address, and this address is passed to the method.
+
+4.5 Constructors
+
+=> The constructors we have defined so far accept no arguments. These constructors set the data members to some initial values.
+However, most cases require the constructors that accept one or more arguments. 
+
+consider this code:
+
+Account acct = new Account();
+acct.setInitialBalance(500);
+acct.setInitialBalance(300);
+
+What is the effect of such code? It is logically inconsistent to initialize the starting balance more than once. 
+
+Correct constructor:
+
+public Account(double startingBalance) {
+   ownerName = "unassigned";
+   balance = startingBalance;
+   
+}
+Once this constructor is defined, there is no longer a need for the setInitialBalance method, so we can safely remove it from the class definition.
+Only the add and deduct methods affect the balance after an object is created.
+
+=> After the old constructor is replaced by this new constructor, we must create an instance by passing one argument when calling the new operator.
+eg.
+Account acct = new Account(500.00);
+
+
+Instead of this one-parameter constructor, we can define a constructor that accepts the name of the owner also, so that it, too, 
+can be initialized at the time of object creation.
+
+public Account(String name, double startingBalance) {
+   ownerName = name;
+   balance = startingBalance;
+   
+}
+
+Account acct = new Account("John Smith", 500.00);
+
+=> It is possible to define more than one constructor to a class. Multiple constructors are called overloaded constructors. 
+It is almost always a good idea to define multiple constructors to a class. 
+
+package procedural_course;
+
+public class AccountVer2 {
+	//Data Members
+	private String ownerName;
+	private double balance;
+
+	//Constructor
+	public AccountVer2(String name, double startingBalance) {
+		ownerName = name;
+		balance = startingBalance;
+
+	}
+	// Adds the passed amount to the balance
+	public void add(double amt) {
+		balance += amt;
+
+	}
+	// Deducts the passed amount from the balance
+	public void deduct(double amt) {
+		balance -= amt;
+			
+	}
+	// Returns the current balance of this account
+	public double getCurrentBalance() {
+		return balance;
+	}
+
+	//Returns the name of this account's owner
+	public String getOwnerName() {
+		return ownerName;
+	}
+
+	//Assigns the name of this account's owner
+	public void setOwnerName(String name) {
+		ownerName = name;
+	}
+
+	
+}
+
+
+Default Constructor
+
+=> A default constructor is a constructor that accepts no arguments and has no statements in its body.
+
+However, we should not rely on compiler to create a constructor for us and
+=> we should always define our own constructor so that we can initialize the data members properly and carry out any other initialization tasks.
+
+
+=> Always define a constructor and initialize data members fully in the constructor so an object will be created in a valid state. 
+=> Once a programmer has added an explicitly defined constructors to a class, no default constructor will be added to the class by the compiler.
+
+
+package procedural_course;
+
+public class Element {
+	//Data Members
+	private String name;
+	private int number;
+	private String symbol;
+	private double mass;
+	private int period;
+	private int group;
+
+	//Constructor
+	public Element (String elementName, int elementNumber, String elementSymbol,
+	 double elementMass, int elementPeriod, int elementGroup) {
+		 name = elementName;
+		 number = elementNumber;
+		 symbol = elementSymbol;
+		 mass = elementMass;
+		 period = elementPeriod;
+		 group = elementGroup;
+	 }
+	 // Returns the element's name
+	 public String getName() {
+		 return name;
+	 }
+	 // Returns the element's atomic number
+	 public int getNumber() {
+		return number;
+	}
+	//Returns the element's 1- or 2-letter symbol
+	public String getSymbol() {
+		 return symbol;
+	}
+  // Returns the element's atomic mass
+  public double getMass() {
+	  return mass;
+  }  
+	// Returns the element's period
+	public int getPeriod() {
+		return period;
+	}
+	// Returns the element's group
+	public int getGroup() {
+		return group;
+	}	
+}
+
+4.6 Information Hiding and Visibility Modifiers
+The modifiers public and private designate the accessibility, or visibilty, of data members and methods. 
+Although it is valid in Java, we do not recommend that programmers, especially beginners, leave out the 
+visibility modifier in declaring data members and methods.
+
+client programmers
+information hiding
+encapsulation
+
+
+=> From the object-oriented design standpoint, we recommend that you always designate the data members and methods as private or public.
+=> Public methods of a class determine the behavior of its instances. Internal details are implemented by private methods and private data members.
+
+=> Declaring the data members private ensures the integrity of the class.
+
+=> To distinguish the private and public components of a class in the program, we use the plus symbol(+) for public and the minus symbol (-) for private.
+
+4.7 Class Constants
+
+=> If a data member is a constant, declare it as a class constant.
+
+package procedural_course;
+
+public class AccountVer3 {
+	//Data Members
+	private static final double FEE = 0.50;
+	private String ownerName;
+	private double balance;
+
+	//Constructor
+	public AccountVer3(String name, double startingBalance) {
+		ownerName = name;
+		balance = startingBalance;
+
+	}
+	// Deducts the passed amount from the balance
+	public void deduct(double amt) {
+		balance = balance - amt - FEE;
+			
+	}
+
+}
+
+The modifier final designates that the identifier FEE is a constant, and the modifier static designates that it is a class constant. 
+The reserved word static is used to declare class components, such as class variables and class methods.
+The inclusion of the reserved word static in the declaration of the main method indicates that it is a class method. It is not so frequent
+that we use class variables and class methods(except of course, the main method). 
+
+class AccountV {
+    private final double FEE = 0.50;
+
+}
+
+This above declaration is not an error, but it is inefficient. If FEE is declared as a class constant, then there will be one copy for the class, 
+and this single copy is shared by all instances of the class. If FEE is declared with out the static modifier, then it is an instance constant. 
+This means every instance of the class will have its own copy of the same value. If 100 instance, 100 values!!
+=> So, to make effective use of a memory, when we declare a data member as a constant, it should be declared as a class constant.
+
+package procedural_course;
+
+import java.util.Random;
+
+public class Die {
+	// Data Members
+
+	//the largest number on a die
+	private static final int MAX_NUMBER = 6;
+
+	//the smallest number on a die
+	private static final int MIN_NUMBER = 1;
+
+	//To represent a die that is not yet rolled
+	private static final int NO_NUMBER = 0;
+
+	private int number;
+
+	private Random random;
+
+	// Constructor
+	public Die() {
+		random = new Random();
+
+		number = NO_NUMBER;
+	}
+	//Rolls the die
+	public void roll() {
+		number = random.nextInt(MAX_NUMBER-MIN_NUMBER + 1) + MIN_NUMBER;
+	}
+	//Returns the number on this die
+	public int getNumber() {
+		return number;
+	}	
+}
+
+package procedural_course;
+
+public class RollDice {
+
+	//Simulates the rolling of three dice
+	public static void main(String[] args) {
+		Die one, two, three;
+
+		one = new Die();
+		two = new Die();
+		three = new Die();
+
+		one.roll();
+		two.roll();
+		three.roll();
+
+		System.out.println("Results are " + one.getNumber() + " " +
+		                                    two.getNumber() + " " +
+																				three.getNumber());
+
+	}
+	
+}
+
+The dependency diagram and a sample output are as follows:
+
+RollDice -------------------> Die
+
+The output of this program is rather primitive, but it still conveys the necessary information. => random!
+
+
+Public Constants
+We stated in the above section that data members should be declared private to ensure the entegrity of a class. 
+Following this guideline, we declared the class constant data members in both sample programs as private. 
+
+But there is an exception. We may want to declare certain types of class constants as public. Here are the reasons for this exception.
+First, a constant is "read only" by its nature, so it won't have a negative impact if we declare it as public. 
+Second, a constant is a clean way to make certain characteristics of the instances known to the client programs.
+
+
+4.8 Local Variables
+We often need to use temporary variables while completing a task in a method. 
+Consider the deduct method of the Account class:
+
+public void deduct(double amt) {
+   balance = balance - amt;
+}
+
+We can rewrite the method, using a local variable, as follows:
+public void deduct(double amt) {
+   double newBalance; //This is a local variable
+   newBalance = balance - amt;
+   balance = newBalance;
+   
+ }
+ 
+ The variable newBalance is called a local variable. They are declared within the method declaration and used for temporary purposes, such as storing
+ intermediate results of a computation.
+ 
+ Such two-step assignment to update the current balance may not seem so useful here, but consider a situation in which we need to check for certain
+ conditions before actually changing the value of current balance.
+ 
+ Use of a temporary local variable will result in a much cleaner code.
+ => While the data members of a class are accessible from all instance methods of the class, local variables and parameters are accessible only from the method in which
+ they are declared, and they are available only while the method is being executed. 
+ 
+ => Memory space for local variables and parameters is allocated upon declaration and at the beginning of the method, respectively, and erased upon exiting from the method.
+ => Local variables and parameters are erased when the execution of a method is completed. 
+ 
+ => When you declare a local variable, make sure the identifier you use for it does not conflict with the data members of a class. 
+ 
+ => The same identifier is used for both the local variable and the instance variable
+ => This changes the value of the local variable, not the instance variable. 
+ 
+ class Sample {
+ 
+ private int number;
+ 
+ public void doSomething() {
+  // The same identifier is used for both the local variable and the instance variable
+ int number;
+ //This changes the value of the local variable, not the instance variable. 
+ number = 15;
+ 
+}
+}
+
+=> Rules for associating an identifier to a local variable, a parameter, and a data member:
+=> 1. If there is a matching local variable declaration or a parameter, then the identifier refers to the local variable or the parameter.
+=> 2. Otherwise, if there is a matching data member declaration, then the identifier refers to the data member.
+=> 3. Otherwise, it is an error because there's no matching declaration.
+
++=> Avoid using the same identifier for the local variables and the data members of a class. 
+
+
+
+
+
+
 
 
 
