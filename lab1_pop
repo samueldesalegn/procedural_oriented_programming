@@ -1,0 +1,37 @@
+Find out the answers for the below questions and do the reading. No need to submit.
+1. Who was the first computer programmer?
+Ans: Ada LoveLace
+
+2. Who designed the Difference and Analytical Engines?
+Charles Babbage
+
+3. Name five major components of a computer.
+A. CPU
+B. RAM
+C. I/O devices
+D. Communication devices
+E. Storage Devices
+4. How many bytes does the 64KB RAM have?
+Ans:
+64*1024B
+=65,536bytes
+5. Suppose the Vehicle class is used in a program that keeps track of vehicle 
+registration for the Department of Motor Vehicles. What kinds of instance 
+variables would you define for such Vehicle objects? Can you think of any useful 
+class variables for the Vehicle class
+
+Ans:
+
+public class VehicleRegistration {
+
+private String plateNo;
+private String ownerName;
+private String vehicleType;
+private String vehicleColor;
+
+}
+
+
+
+
+  
