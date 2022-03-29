@@ -30,14 +30,31 @@ To instruct a class or an object to perform a task, we send a message to it. For
 => For a class or an object to process the message it receives, it must possess a matching method, 
 which is a sequence of instructions that a class or an object follows to perform a task.
 => A method defined for a class is called a class method
+So we define an instance method for a task that pertains to an individual instance and a class method for a task that pertains to all instances. 
+
+
 => A method defined for an object is an instance method.
+
+Instance method
+Suppose a method called walk is defined for a Robot object and instructs the robot to walk a designated distance. With this method defined, we can send the message
+walk to a Robot object, along with the distance to be walked. 
 => A value we pass to an object is called an argument of a message. 
 => Notice that the name of the message we send to an object or a class must be the same as the method's name.
 
+Q1. Draw an object diagram of an Account object object with instance methods deposit and withdraw
+
+Q2. Is the getObstacleDistance method an instance or a class method
+
+
+
 1.3 Class and Instance Data Values
+Suppose the method deposit of an Account object instructs the object to add a given amount to the current balance. 
+=> Where does the object keep the current balance?
+** Remember that an object is comprised of data values and methods. 
 => An object is comprised of data values and methods. Analogous to defining class and instance methods, we can define class and instance data values.
 For exmaple, we can define an instance data value current balance for Account objects to record the current balance.
 => All instances of the same class will possess the same set of data values.
+Items such as openning balance and account number are other possible instance data values for Account objects. 
 
 A class data value is used to represent information shared by all instances or to represent collective information about the instances. 
 Notice the class data value is underlined to show the fact that this value is accessible to individual objects, which are underlined. 
