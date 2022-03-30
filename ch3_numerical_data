@@ -21,6 +21,12 @@ For example, we can declare like:
 
 int x, y;
 
+float z = 4.5f;
+double w = 4.6;
+long l = 123l;
+short s = 345;
+byte b = 100;
+
 => When this declaration is made, memory locations to store data values for x and y are allocated. 
 These memory locations are called variables, and x and y are the names we associate with the memory locations.
 Any valid identifier can be used as a variable name. After the declaration is made, we can assign only integers to x and y.
@@ -54,6 +60,8 @@ Assignment statement
 3.2 Arithmetic Expressions
 
 An arithmetic operator designates numerical computation. 
+<variable> = <expression>;
+expression => identifier, constants, operators, etc.
 
 Integer Division
 When both numbers are integers, the result is an integer quotient. That is, any fractional part is truncated. 
@@ -96,6 +104,14 @@ A casting conversion, or typecasting, is a process that converts a value of one 
 Numeric promotion
 
 => An implicit conversion called numeric promotion is applied to the operands of an arithmetic operator. The promotion is based on the rules.
+
+int k = 10;
+float f = 4.6f;
+double d = f; //Automatic promotion because of higher to lower datatype rules
+
+double exp = k + f + d;
+
+
 
 The conversion is called promotion because the operand is converted from a lower to a higher precision.
 
