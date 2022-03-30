@@ -178,6 +178,52 @@ convert to binary
 => 1/2 = 0 + 1
 => 1100010
 
+Date: 3/31/2022 – Thursday
+
+Time: 9.45 – 10 am
+
+Location: V28 classroom
+
+Portion: Lessons 1,2 and 3
+
+Quiz-1 consists of the following
+
+    True or False
+    Multiple-choice Questions
+    Finding the Output / Compilation Error / Runtime Error
+    Binary to Decimal
+
+Sample Questions
+
+    Say True or False for the given statement. No other words allowed.
+
+True I/O devices allow communication between the user and the CPU.
+
+    Which one is not a Storage device?
+
+    HDD       b. SD Card      c.  Modem         d. SSD
+
+    What is the output of the given code?
+
+String str = "I Love Java and Java loves me." ;
+
+                        System.out.println(str.indexOf("J"));
+
+    7            b.  16            c. 8            d. 17       
+
+    What happen when declare as mentioned below?
+
+
+int k = 23.5;
+
+    Compilation Error        b. Run time Error      c. No Error
+
+ 
+
+All the best
+
+Dr. Renuka Mohanraj
+
 
 
 
