@@ -44,13 +44,14 @@ To declare an object as an instance of some class, the class must be defined alr
 
 Identifier
 When we declare an object, we must give it a name. Any valid identifier that is not reserved for other uses can be used as an object name.
-A Java identifier is a sequence of letters, digits, underscores, and dollar signs with the firstone being a nondigit.
+A Java identifier is a sequence of letters, digits, underscores, and dollar signs with the first one being a non-digit.
 We use an identifier to name a class, object, method, and others.
 
 
 Standard Naming convention
 
-We follow the Java standard naming convention of using an uppercase letter for the first letter of the class names and a lowercase letter for the first of the object names.
+We follow the Java standard naming convention of using an uppercase letter for the first letter of the class names 
+and a lowercase letter for the first letter of the object names.
 It is important to follow the standard naming convention so others who read your program can easily distinguish the purposes of identifiers.
 Porgrams that follow the standard naming convention are easier to read than those that do not.
 And remember that software maintenance is easier with easy-to-understand programs.
@@ -69,6 +70,13 @@ Student John = new Student();
 Remember that when an object is created, a certain amount of memory space is allocated for storing this object. 
 If this allocated but unused space is not returned to the system for other uses, the space gets wasted. 
 This returning of space to the system is called deallocation, and the mechanism to deallocate unused space is called garbage collection.
+
+eg.
+Customer c = new Customer(); //first new
+c= new Customer(); // second new
+
+=> The first Customer object will be deallocated eventually because there are no references to it anymore.
+
 
 Message Sending
 
@@ -225,7 +233,7 @@ String cDate = sdf.format(today);
 System.out.println(cDate);
 
 Local Date = Current Date
-LOcalDare d1 = LocalDate.now();
+LocalDate d1 = LocalDate.now();
 System.out.println(d1);
 
 //How to set a new Date
